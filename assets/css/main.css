@@ -12,6 +12,7 @@
   
   html {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   body {
@@ -834,7 +835,7 @@
     background-size:cover;
     background-position: center center;
     background-repeat: repeat, no-repeat;
-    z-index: -1;
+
     display: flex;
     height: 100vh;
     display: flex;
@@ -2394,3 +2395,40 @@
   height: 100%;
   object-fit: cover;
 }
+.open {
+  padding: 0.8em 1.8em;
+  border: 2px solid WHITE;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 30000;
+  cursor: pointer;
+  font-family: inherit;
+  color: WHITE;
+ }
+ 
+.open::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: white;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .open:hover::before {
+  width: 105%;
+ }
+ 
+ .open:hover {
+  color: #111;
+ }
+ 

@@ -330,4 +330,8 @@
   .hitmun{
     margin-bottom: 25px;
   }
+  .open {
+  font-size: 12px;
+  padding: 0.5em 1.2em;
+  }
 }

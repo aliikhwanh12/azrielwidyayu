@@ -28,18 +28,17 @@
   <!-- Responsive Style -->
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/css/">
-  
+
 </head>
 
 <body>
-  <audio hidden id="autoplay" loop src="assets/music/rapsodi.MP3" type="audio/mpeg">
+  <audio hidden id="audio" loop src="assets/music/rapsodi.MP3" type="audio/mpeg">
   </audio>
 
   <!-- Header Area wrapper Starts -->
   <header id="header-wrap">
     <!-- Hero Area Start -->
     <div id="hero-area" class="hero-area-bg">
-      <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div style="padding: 0;" class="col-md-12 col-sm-12">
@@ -49,6 +48,9 @@
                 <p class="wow fadeInDown" style="color: white;">The Wedding Of</p>
                 <h2 class="section-title-main wow fadeInDown" data-wow-delay="0.3s">Azriel & Widyayu</h2>
               </div>
+              <button onclick="scrolll(); this.remove()" class="open wow fadeInDown">
+                Open Invitation
+            </button>
             </div>
 
 
@@ -138,7 +140,8 @@
     <section id="timeline" class="section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="hitmun section-title wow fadeInDown" style="padding: 0;" data-wow-delay="0.3s">Hitung Mundur Menuju Acara
+          <h2 class="hitmun section-title wow fadeInDown" style="padding: 0;" data-wow-delay="0.3s">Hitung Mundur Menuju
+            Acara
           </h2>
         </div>
 
@@ -156,7 +159,8 @@
             </ul>
           </div>
           <div id="dedlen">
-            <p class=" wow fadeInDown" style="padding: 0;">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+            <p class=" wow fadeInDown" style="padding: 0;">Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+              menciptakan pasangan-pasangan
               untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
               antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
               (kebesaran Allah) bagi kaum yang berpikir.
@@ -248,14 +252,14 @@
     <div class="container">
 
 
-        <div class="social-icon text-center">
-          <a class="instagram" href="https://www.instagram.com/remisixx/" target="_blank"><i
-              class="lni-instagram-filled"></i></a>
-          <a class="instagram" href="https://www.instagram.com/al_ikhwan.h/" target="_blank"><i
-              class="lni-instagram-filled"></i></a>
-        </div>
+      <div class="social-icon text-center">
+        <a class="instagram" href="https://www.instagram.com/remisixx/" target="_blank"><i
+            class="lni-instagram-filled"></i></a>
+        <a class="instagram" href="https://www.instagram.com/al_ikhwan.h/" target="_blank"><i
+            class="lni-instagram-filled"></i></a>
+      </div>
 
-        <p style="padding: 0;">Designed and Developed with ♥ <br>by Ali Ikhwan Habibie & XII MIPA 6</a></p>
+      <p style="padding: 0;">Designed and Developed with ♥ <br>by Ali Ikhwan Habibie & XII MIPA 6</a></p>
 
 
     </div>
@@ -329,8 +333,12 @@
       //seconds
     }, 1000);
 
-    window.onload = function(){
-      document.getElementById("autoplay").play();
+    function scrolll(){
+      document.getElementsByTagName('html')[0].style.overflowY = "scroll";
+      document.getElementById('timeline').scrollIntoView({behavior: 'smooth'}, true);
+      var audio = document.getElementById("audio");
+        audio.play();
+
     }
   </script>
 </body>
